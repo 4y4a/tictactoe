@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Крестики-нолики</title>
+    <link rel="stylesheet prefetch" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="./js/inheritance.js"></script>
+    <script src="./js/jquery.tmpl.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<script type="html/template" id="cell-view-teplate">
+  <div data-index="{{=it.index }}" class="item {{=it.class}}"></div>
+</script>
+
+<script type="html/template" id="game-list-row-template">
+  <li data-id="{{=it._id}}">{{=it._id}}<i class="fa fa-times"></i></li>
+</script>
+
+<body>
+    <div class="container">
+      <div class="game-list-wrap">
+        <p>Список игр:<i class="fa fa-refresh"></i></p>
+        <ul class="game-list">
+        </ul>
+      </div>
+      <div class="tic-tac-toe-wrap">
+        <div class="tic-tac-toe"></div>
+        <div class="status"></div>
+      </div>
+      <div class="clear"></div>
+      <div class="button_wrap">
+        <button class="new-game-butt">Новая игра</button>
+      </div>
+    </div>
+</body>
+</html>
